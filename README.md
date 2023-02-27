@@ -12,6 +12,8 @@ Este es un chatbot impulsado por inteligencia artificial que utiliza la API de O
     pip install gtts
     pip install playsound
     pip install termcolor
+
+> #### TU API-KEY de openia, puedes conseguirla aquí: **[https://platform.openai.com/account/api-keys](https://platform.openai.com/account/api-keys)** 
  
 # Uso
 Para utilizar el chatbot, simplemente ejecute el script main.py en la línea de comandos:
