@@ -1,4 +1,4 @@
-# AI Chatbot con AUDIO
+# AI Chatbot openia GTP con AUDIO
 [![Python](https://img.shields.io/badge/Python-3.10+-yellow?style=for-the-badge&logo=python&logoColor=white&labelColor=101010)](https://python.org)
 
 Este es un chatbot impulsado por inteligencia artificial que utiliza la API de OpenAI para generar respuestas y la librería de Google Text-to-Speech (gTTS) para convertir las respuestas en audio.
