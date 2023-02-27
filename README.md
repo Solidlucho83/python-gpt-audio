@@ -16,10 +16,8 @@ Este es un chatbot impulsado por inteligencia artificial que utiliza la API de O
 > #### TU API-KEY de openia, puedes conseguirla aquí: **[https://platform.openai.com/account/api-keys](https://platform.openai.com/account/api-keys)** 
  
 # Uso
-Para utilizar el chatbot, simplemente ejecute el script main.py en la línea de comandos:
-    
-    python main.py
-    
+Para utilizar el chatbot, simplemente ejecute el script.
+   
 A continuación, se le pedirá que ingrese una pregunta. El chatbot generará una respuesta utilizando la API de OpenAI y la convertirá en audio utilizando la librería de gTTS. La respuesta se reproducirá automáticamente a través de su sistema de audio predeterminado.
 
 Para salir del chatbot, escriba "exit" en la línea de entrada.
