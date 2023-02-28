@@ -15,7 +15,7 @@ def voice():
     r=sr.Recognizer()
 
     with sr.Microphone() as source:
-     r.adjust_for_ambient_noise(source,duration=1) 
+     r.adjust_for_ambient_noise(source,duration=1)
      print("Ask me a question, speak clearly and slowly please => ")
      audio= r.listen(source)
      try:
@@ -32,8 +32,8 @@ def new_question(LANGUAGE, ENGINE_IA, AUDIO_FILE, text):
 
         response_text = completion.choices[0].text
         print(response_text)
-
-        tts = gTTS(response_text, lang=LANGUAGE) 
+        
+        tts = gTTS(response_text, lang=LANGUAGE,slow=False)
         tts.save(AUDIO_FILE)                        
         playsound(AUDIO_FILE)
         os.remove(AUDIO_FILE)
