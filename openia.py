@@ -15,7 +15,7 @@ def voice():
     r=sr.Recognizer()
 
     with sr.Microphone() as source:
-     r.adjust_for_ambient_noise(source,duration=1)
+     r.adjust_for_ambient_noise(source,duration=1) 
      print("Ask me a question, speak clearly and slowly please => ")
      audio= r.listen(source)
      try:
@@ -37,7 +37,9 @@ def new_question(LANGUAGE, ENGINE_IA, AUDIO_FILE, text):
         tts.save(AUDIO_FILE)                        
         playsound(AUDIO_FILE)
         os.remove(AUDIO_FILE)
-
+        print()
+        print("Press Enter to continue...")
+        input() # Espera hasta que se presione Enter
            
     except Exception as e:
         print(colored("Sorry, error:", "red"))
