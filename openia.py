@@ -3,44 +3,50 @@ from gtts import gTTS
 from playsound import playsound
 from termcolor import colored
 import os
-
+import speech_recognition as sr
 
 LANGUAGE = "es" #define audio language
 ENGINE_IA = "text-davinci-003"
 AUDIO_FILE = "response.mp3"
-openai.api_key = "" #you api key here
+openai.api_key =  "" #you api 
 
-def new_question(LANGUAGE, ENGINE_IA, AUDIO_FILE):
-    while True:
-        question = input(colored("New Chat or Exit=> ", "green"))
-        print()
 
-     
-        if question.lower() == "exit":
-            print()
-            break
+def voice():
+    r=sr.Recognizer()
 
-        try:
-            print("Wait Moment....")
-            completion = openai.Completion.create(engine=ENGINE_IA, prompt=question, n=1, max_tokens=2048)
+    with sr.Microphone() as source:
+     r.adjust_for_ambient_noise(source,duration=1)
+     print("Ask me a question, speak clearly and slowly please => ")
+     audio= r.listen(source)
+     try:
+        text = r.recognize_google(audio, language="es-AR")
+        print(text)
+        new_question(LANGUAGE, ENGINE_IA, AUDIO_FILE, text)
+     except:
+        print("sorry, could not recognise")
 
-            response_text = completion.choices[0].text
-            print(response_text)
+def new_question(LANGUAGE, ENGINE_IA, AUDIO_FILE, text):
+    try:
+        print("Wait Moment....")
+        completion = openai.Completion.create(engine=ENGINE_IA, prompt=text, n=1, max_tokens=2048)
 
-            tts = gTTS(response_text, lang=LANGUAGE) 
-            tts.save(AUDIO_FILE)                        
-            playsound(AUDIO_FILE)
-            os.remove(AUDIO_FILE)
+        response_text = completion.choices[0].text
+        print(response_text)
+
+        tts = gTTS(response_text, lang=LANGUAGE) 
+        tts.save(AUDIO_FILE)                        
+        playsound(AUDIO_FILE)
+        os.remove(AUDIO_FILE)
 
            
-        except Exception as e:
-            print(colored("Sorry, error:", "red"))
-            print(colored(str(e), "red"))
+    except Exception as e:
+        print(colored("Sorry, error:", "red"))
+        print(colored(str(e), "red"))
 
-        print()
+    print()
 
 if __name__ == "__main__":
-    new_question(LANGUAGE, ENGINE_IA, AUDIO_FILE)
-
+    while True:
+      voice()
 
 
