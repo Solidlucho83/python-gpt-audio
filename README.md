@@ -18,8 +18,6 @@ Para utilizar el chatbot, simplemente ejecute el script.
    
 A continuación, se le pedirá que formules tu pregunta al micrófono de tu equipo. El chatbot generará una respuesta utilizando la API de OpenAI y la convertirá en audio utilizando la librería de gTTS. La respuesta se reproducirá automáticamente a través de su sistema de audio predeterminado.
 
-Para salir del chatbot, escriba "exit" en la línea de entrada.
-
 # Personalización
 Puede personalizar el comportamiento del chatbot modificando las siguientes variables en el archivo main.py:
 
