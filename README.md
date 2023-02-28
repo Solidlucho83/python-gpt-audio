@@ -19,7 +19,7 @@ Este es un chatbot impulsado por inteligencia artificial que utiliza la API de O
 # Uso
 Para utilizar el chatbot, simplemente ejecute el script.
    
-A continuación, se le pedirá que ingrese una pregunta. El chatbot generará una respuesta utilizando la API de OpenAI y la convertirá en audio utilizando la librería de gTTS. La respuesta se reproducirá automáticamente a través de su sistema de audio predeterminado.
+A continuación, se le pedirá que formules tu pregunta al micrófono de tu equipo. El chatbot generará una respuesta utilizando la API de OpenAI y la convertirá en audio utilizando la librería de gTTS. La respuesta se reproducirá automáticamente a través de su sistema de audio predeterminado.
 
 Para salir del chatbot, escriba "exit" en la línea de entrada.
 
