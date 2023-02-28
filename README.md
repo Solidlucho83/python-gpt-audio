@@ -3,9 +3,6 @@
 
 Este es un chatbot impulsado por inteligencia artificial que utiliza la API de OpenAI para generar respuestas y la librería de Google Text-to-Speech (gTTS) para convertir las respuestas en audio.
 
-![image](https://user-images.githubusercontent.com/52086707/221566361-ddd95817-e88e-4c43-af09-99276722b02b.png)
-
-
 # Requerimientos
     Python 3.x
     pip install openai
