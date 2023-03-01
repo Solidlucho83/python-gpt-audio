@@ -1,14 +1,15 @@
+import os
+
 import openai
+import speech_recognition as sr
 from gtts import gTTS
 from playsound import playsound
 from termcolor import colored
-import os
-import speech_recognition as sr
 
 LANGUAGE = "es"  # define audio language
 ENGINE_IA = "text-davinci-003"
 AUDIO_FILE = "response.mp3"
-openai.api_key = "" # you api-key here
+openai.api_key = ""  # you api-key here
 
 
 def voice():
