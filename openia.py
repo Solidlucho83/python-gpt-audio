@@ -8,7 +8,7 @@ import speech_recognition as sr
 LANGUAGE = "es"  # define audio language
 ENGINE_IA = "text-davinci-003"
 AUDIO_FILE = "response.mp3"
-openai.api_key = ""
+openai.api_key = "" # you api-key here
 
 
 def voice():
